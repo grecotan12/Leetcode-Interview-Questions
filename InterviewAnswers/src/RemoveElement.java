@@ -1,7 +1,7 @@
 import java.util.Arrays;
 public class RemoveElement {
     public static void main(String[] args) {
-        int[] nums = {2,2,3};
+        int[] nums = {1,2,3,4};
         int val = 2;
         int count = 0;
         // PUT ELEMENT THAT IS NOT EQUAL TO VAL TO 
@@ -13,6 +13,13 @@ public class RemoveElement {
             }
         }
         System.out.println(Arrays.toString(nums));
-
+        // int count = 0;
+        // System.out.println(nums[count]);
+        // nums[count] = nums[2];
+        // System.out.println(Arrays.toString(nums));
+        // count++;
+        // System.out.println(nums[count]);
+        // nums[count] = nums[3];
+        // System.out.println(Arrays.toString(nums));
     }
 }

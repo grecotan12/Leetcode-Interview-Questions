@@ -1,9 +1,5 @@
-import java.util.Arrays;
-public class AddBinary {
-    public static void main(String[] args) {
-        String a = "1010";
-        String b = "1101";
-
+class Solution {
+    public String addBinary(String a, String b) {
         String newstring="";
         int i=a.length()-1;
         int j=b.length()-1;
@@ -12,24 +8,12 @@ public class AddBinary {
             char first=a.charAt(i);
             char second=b.charAt(j);
             if (first=='0' && second=='0'){
-                if (carry=='1'){
-                    newstring='1'+newstring;
-                    carry='0';
-                }
-                else{
-                    newstring='0'+newstring;
-                    carry='0';
-                }
+                newstring = carry == '1' ? '1' + newstring : '0' + newstring;
+                carry = '0';
             }
             else if (first=='1' && second=='1'){
-                if (carry=='0'){
-                    newstring='0'+newstring;
-                    carry='1';
-                }
-                else{
-                    newstring='1'+newstring;
-                    carry='1';
-                }
+                newstring = carry == '0' ? '0' + newstring : '1' + newstring;
+                carry = '1';
             }
             else if (first=='1' && second=='0'){
                 if(carry=='0'){
@@ -94,7 +78,6 @@ public class AddBinary {
             newstring='1'+newstring;
             carry='0';
         }
-        System.out.println(newstring);
-                
+        return newstring;
     }
 }

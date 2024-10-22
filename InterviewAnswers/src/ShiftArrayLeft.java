@@ -1,5 +1,5 @@
 import java.util.Arrays;
-public class ShiftArray {
+public class ShiftArrayLeft {
     public static void main(String[] args) {
         int[] arr = {0, 1, 2, 3, 4};
         int count = 0;
